@@ -1,0 +1,25 @@
+{
+  "name": "ebuddy-tomcat6",
+  "author": "Taylan Develioglu",
+  "description": "Tomcat6 module",
+  "license": "Apache",
+  "project_page": "",
+  "source": "",
+  "summary": "Tomcat6 module",
+  "version": "0.10",
+  "checksums": {
+    "Modulefile": "b9679dd7738f6d91283ef45810a23379",
+    "README.markdown": "815991b76b98fcd93aa8c38ad6a8e2da",
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "manifests\\init.pp": "96c01c10d27c6de78c61ecbc1fcff708",
+    "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec\\spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "tests\\init.pp": "01f6c188ce55ec826e75b3f5d3f16447"
+  },
+  "dependencies": [
+    {
+      "name": "ripienaar/concat",
+      "version_requirement": "\u003e\u003d0.2.0"
+    }
+  ]
+}

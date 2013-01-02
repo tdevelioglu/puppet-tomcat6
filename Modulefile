@@ -1,0 +1,10 @@
+name 'ebuddy-tomcat6'
+version '0.10'
+
+author 'Taylan Develioglu'
+license 'Apache'
+project_page ''
+source ''
+summary 'Tomcat6 module'
+description 'Tomcat6 module'
+dependency 'ripienaar/concat', '>=0.2.0'
