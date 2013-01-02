@@ -1,0 +1,10 @@
+    <Engine name="Catalina" defaultHost="localhost" jvmRoute="<%= jvmroute %>">
+
+      <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+             resourceName="UserDatabase"/>
+
+      <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true"
+            xmlValidation="false" xmlNamespaceAware="false">
+      </Host>
+

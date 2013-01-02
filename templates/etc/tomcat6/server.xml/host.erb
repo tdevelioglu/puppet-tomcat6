@@ -1,0 +1,21 @@
+    <Host name="<%= name %>"
+      <% if appbase -%>appBase="<%= appbase %>"<% end -%>
+      <% if autoDeploy -%>autodeploy="<%= autodeploy %>"<% end -%>      
+      <% if backgroundprocessordelay -%>backgroundProcessorDelay="<%= backgroundprocessordelay %>"<% end -%>
+      <% if classname -%>className="<%= classname %>"<% end -%>
+      <% if deployignore -%>deployIgnore="<%= deployignore %>"<% end -%>
+      <% if deployonstartup -%>deployOnStartup="<%= deployonstartup %>"<% end -%>
+      <% if deployxml -%>deployXML="<%= deployxml %>"<% end -%>
+      <% if errorreportvalveclass -%>errorReportValveClass="<%= errorreportvalveclass %>"<% end -%>
+      <% if unpackwars -%>unpackWARs="<%= unpackwars %>"<% end -%>
+      <% if workdir -%>workDir="<%= workdir %>"<% end -%>
+    >
+
+<% if single_signon -%>
+      <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
+<% end -%>
+<% if access_log -%>
+      <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+             prefix="<%= name %>_access_log." suffix=".txt" pattern="common" resolveHosts="false"/>
+<% end -%>
+    </Host>
