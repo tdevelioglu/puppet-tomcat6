@@ -6,6 +6,7 @@ define tomcat6::connector (
   $algorithm                        = undef,
   $allowtrace                       = undef,
   $allowunsafelegacyrenegotiation   = undef,
+  $backlog                          = undef,
   $buffersize                       = undef,
   $ciphers                          = undef,
   $clientauth                       = undef,
