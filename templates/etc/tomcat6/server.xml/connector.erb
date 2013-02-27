@@ -1,110 +1,326 @@
     <Connector port="<%= port %>"
-    <% if acceptcount -%>acceptCount="<%= acceptount %>"<% end -%>
-    <% if acceptorthreadcount -%>acceptorThreadCount="<%= acceptorthreadcount %>"<% end -%>
-    <% if acceptorthreadpriority -%>acceptorThreadPriority="<%= acceptorthreadpriority %>"<% end -%>
-    <% if address -%>address="<%= address %>"<% end -%>
-    <% if algorithm -%>algorithm="<%= algorithm %>"<% end -%>
-    <% if allowtrace -%>allowTrace="<%= allowtrace %>"<% end -%>
-    <% if allowunsafelegacyrenegotiation -%>allowUnsafeLegacyRenegotiation="<%= allowunsafelegacyrenegotiation %>"<% end -%>
-    <% if buffersize -%>buffersize="<%= buffersize %>"<% end -%>
-    <% if backlog -%>backlog="<%= backlog %>"<% end -%>
-    <% if ciphers -%>ciphers="<%= ciphers %>"<% end -%>
-    <% if clientauth -%>clientAuth="<%= clientauth %>"<% end -%>
-    <% if clientcertprovider -%>clientCertProvider="<%= clientcertprovider %>"<% end -%>
-    <% if command_line_options -%>command-line-options="<%= command_line_options %>"<% end -%>
-    <% if compressablemimetype -%>compressableMimeType="<%= compressablemimetype %>"<% end -%>
-    <% if compression -%>compression="<%= compression %>"<% end -%>
-    <% if connectionlinger -%>connectionLinger="<%= connectionlinger %>"<% end -%>
-    <% if connectiontimeout -%>connectionTimeout="<%= connectiontimeout %>"<% end -%>
-    <% if crlfile -%>crlfile="<%= crlfile %>"<% end -%>
-    <% if disableuploadtimeout -%>disableUploadTimeout="<%= disableuploadtimeout %>"<% end -%>
-    <% if emptysessionpath -%>emptySessionPath="<%= emptysessionpath %>"<% end -%>
-    <% if enablelookups -%>enableLookups="<%= enablelookups %>"<% end -%>
-    <% if executor -%>executor="<%= executor %>"<% end -%>
-    <% if keepalivetimeout -%>keepAliveTimeout="<%= keepalivetimeout %>"<% end -%>
-    <% if keyalias -%>keyAlias="<%= keyalias %>"<% end -%>
-    <% if keystorefile -%>keyStoreFile="<%= keystorefile %>"<% end -%>
-    <% if keystorepass -%>keyStorePass="<%= keystorepass %>"<% end -%>
-    <% if keystoreprovider -%>keyStoreProvider="<%= keystoreprovider %>"<% end -%>
-    <% if keystoretype -%>keyStoreType="<%= keystoretype %>"<% end -%>
-    <% if maxheadercount -%>maxHeaderCount="<%= maxheadercount %>"<% end -%>
-    <% if maxhttpheadersize -%>maxHttpHeaderSize="<%= maxhttpheadersize %>"<% end -%>
-    <% if maxkeepaliverequests -%>maxKeepaliveRequests="<%= maxkeepaliverequests %>"<% end -%>
-    <% if maxparametercount -%>maxParameterCount="<%= maxparametercount %>"<% end -%>
-    <% if maxpostsize -%>maxPostSize="<%= maxpostsize %>"<% end -%>
-    <% if maxsavepostsize -%>maxSavePostSize="<%= maxsavepostsize %>"<% end -%>
-    <% if maxthreads -%>maxThreads="<%= maxthreads %>"<% end -%>
-    <% if nocompressionuseragents -%>noCompressionUserAgents="<%= nocompressionuseragents %>"<% end -%>
-    <% if oomparachute -%>oomParachute="<%= oomparachute %>"<% end -%>
-    <% if parsebodymethods -%>parseBodyMethods="<%= parsebodymethods %>"<% end -%>
-    <% if pollersize -%>pollerSize="<%= pollersize %>"<% end -%>
-    <% if pollerthreadcount -%>pollerThreadCount="<%= pollerthreadcount %>"<% end -%>
-    <% if pollerthreadpriority -%>pollerThreadPriority="<%= pollerthreadpriority %>"<% end -%>
-    <% if polltime -%>pollTime="<%= polltime %>"<% end -%>
-    <% if processorcache -%>processorCache="<%= processorcache %>"<% end -%>
-    <% if protocol %>protocol="<%= protocol %>"<% end -%>
-    <% if proxyname -%>proxyName="<%= proxyname %>"<% end -%>
-    <% if proxyport -%>proxyPort="<%= proxyport %>"<% end -%>
-    <% if redirectport -%>redirectPort="<%= redirectport %>"<% end -%>
-    <% if restricteduseragents -%>restrictedUserAgents="<%= restricteduseragents %>"<% end -%>
-    <% if scheme -%>scheme="<%= scheme %>"<% end -%>
-    <% if secure -%>secure="<%= secure %>"<% end -%>
-    <% if selectorpool_maxselectors -%>selectorpool.maxSelectors="<%= selectorpool_maxselectors %>"<% end -%>
-    <% if selectorpool_maxspareselectors -%>selectorpool.maxSpareSelectors="<%= selectorpool_maxspareselectors %>"<% end -%>
-    <% if selectortimeout -%>selectorTimeout="<%= selectortimeout %>"<% end -%>
-    <% if sendfilesize -%>sendFileSize="<%= sendfilesize %>"<% end -%>
-    <% if sendfilethreadcount -%>sendFileThreadCount="<%= sendfilethreadcount %>"<% end -%>
-    <% if server -%>server="<%= server %>"<% end -%>
-    <% if sessioncachesize -%>sessionCacheSize="<%= sessioncachesize %>"<% end -%>
-    <% if sessiontimeout -%>sessionTimeout="<%= sessiontimeout %>"<% end -%>
-    <% if socket_appreadbufsize -%>socket.appReadBufSize="<%= socket_appreadbufsize %>"<% end -%>
-    <% if socket_appwritebufsize -%>socket.appWriteBufSize="<%= socket_appwritebufsize %>"<% end -%>
-    <% if socket_bufferpoolsize -%>socket.bufferPoolSize="<%= socket_bufferpoolsize %>"<% end -%>
-    <% if socket_bufferpool -%>socket.bufferPool="<%= socket_bufferpool %>"<% end -%>
-    <% if socketbuffer -%>socketBuffer="<%= socketbuffer %>"<% end -%>
-    <% if socket_directbuffer -%>socket.directBuffer="<%= socket_directbuffer %>"<% end -%>
-    <% if socket_eventcache -%>socket.eventCache="<%= socket_eventcache %>"<% end -%>
-    <% if socket_keycache -%>socket.keyCache="<%= socket_keycache %>"<% end -%>
-    <% if socket_oobinline -%>socket.ooBInline="<%= socket_oobinline %>"<% end -%>
-    <% if socket_performancebandwidth -%>socket.performanceBandwidth="<%= socket_performancebandwidth %>"<% end -%>
-    <% if socket_performanceconnectiontime -%>socket.performanCeconnectionTime="<%= socket_performanceconnectiontime %>"<% end -%>
-    <% if socket_performancelatency -%>socket.performanceLatency="<%= socket_performancelatency %>"<% end -%>
-    <% if socket_processorcache -%>socket.processorCache="<%= socket_processorcache %>"<% end -%>
-    <% if socket_rxbufsize -%>socket.rxBufSize="<%= socket_rxbufsize %>"<% end -%>
-    <% if socket_sokeepalive -%>socket.soKeepAlive="<%= socket_sokeepalive %>"<% end -%>
-    <% if socket_solingeron -%>socket.soLingerOn="<%= socket_solingeron %>"<% end -%>
-    <% if socket_solingertime -%>socket.soLingerTime="<%= socket_solingertime %>"<% end -%>
-    <% if socket_soreuseaddress -%>socket.soReuseAddress="<%= socket_soreuseaddress %>"<% end -%>
-    <% if socket_sotimeout -%>socket.soTimeout="<%= socket_sotimeout %>"<% end -%>
-    <% if socket_sotrafficclass -%>socket.soTrafficClass="<%= socket_sotrafficclass %>"<% end -%>
-    <% if socket_tcpnodelay -%>socket.tcpNoDelay="<%= socket_tcpnodelay %>"<% end -%>
-    <% if socket_txbufsize -%>socket.txBufSize="<%= socket_txbufsize %>"<% end -%>
-    <% if socket_unlocktimeout -%>socket.unlockTimeout="<%= socket_unlocktimeout %>"<% end -%>
-    <% if sslcacertificatefile -%>SSLCACertificateFile="<%= sslcacertificatefile %>"<% end -%>
-    <% if sslcacertificatepath -%>SSLCACertificatePath="<%= sslcacertificatepath %>"<% end -%>
-    <% if sslcarevocationfile -%>SSLCARevocationFile="<%= sslcarevocationfile %>"<% end -%>
-    <% if sslcarevocationpath -%>SSLCARevocationPath="<%= sslcarevocationpath %>"<% end -%>
-    <% if sslcertificatechainfile -%>SSLCertificateChainFile="<%= sslcertificatechainfile %>"<% end -%>
-    <% if sslcertificatefile -%>SSLCertificateFile="<%= sslcertificatefile %>"<% end -%>
-    <% if sslcertificatekeyfile -%>SSLCertificateKeyFile="<%= sslcertificatekeyfile %>"<% end -%>
-    <% if sslciphersuite -%>SSLCipherSuite="<%= sslciphersuite %>"<% end -%>
-    <% if sslenabled -%>SSLEnabled="<%= sslenabled %>"<% end -%>
-    <% if sslpassword -%>SSLPassword="<%= sslpassword %>"<% end -%>
-    <% if sslprotocol -%>SSLProtocol="<%= sslprotocol %>"<% end -%>
-    <% if sslverifyclient -%>SSLVerifyClient="<%= sslverifyclient %>"<% end -%>
-    <% if sslverifydepth -%>SSLVerifyDepth="<%= sslverifydepth %>"<% end -%>
-    <% if tcpnodelay -%>tcpNoDelay="<%= tcpnodelay %>"<% end -%>
-    <% if threadpriority -%>threadPriority="<%= threadpriority %>"<% end -%>
-    <% if trustmanagerclassname -%>trustManagerClassName="<%= trustmanagerclassname %>"<% end -%>
-    <% if truststorefile -%>trustStoreFile="<%= truststorefile %>"<% end -%>
-    <% if truststorepass -%>trustStorePass="<%= truststorepass %>"<% end -%>
-    <% if truststoreprovider -%>trustStoreProvider="<%= truststoreprovider %>"<% end -%>
-    <% if truststoretype -%>trustStoreType="<%= truststoretype %>"<% end -%>
-    <% if uriencoding -%>uriEncoding="<%= uriencoding %>"<% end -%>
-    <% if usebodyencodingforuri -%>useBodyEncodingForURI="<%= usebodyencodingforuri %>"<% end -%>
-    <% if usecomet -%>useComet="<%= usecomet %>"<% end -%>
-    <% if useexecutor -%>useExecutor="<%= useexecutor %>"<% end -%>
-    <% if useipvhosts -%>useIPVhosts="<%= useipvhosts %>"<% end -%>
-    <% if usesendfile -%>useSendFile="<%= usesendfile %>"<% end -%>
-    <% if xpoweredby -%>xPoweredBy="<%= xpoweredby %>"<% end -%>
+<% if acceptcount -%>
+      acceptCount="<%= acceptcount %>"
+<% end -%>
+<% if acceptorthreadcount -%>
+      acceptorThreadCount="<%= acceptorthreadcount %>"
+<% end -%>
+<% if acceptorthreadpriority -%>
+      acceptorThreadPriority="<%= acceptorthreadpriority %>"
+<% end -%>
+<% if address -%>
+      address="<%= address %>"
+<% end -%>
+<% if algorithm -%>
+      algorithm="<%= algorithm %>"
+<% end -%>
+<% if allowtrace -%>
+      allowTrace="<%= allowtrace %>"
+<% end -%>
+<% if allowunsafelegacyrenegotiation -%>
+      allowUnsafeLegacyRenegotiation="<%= allowunsafelegacyrenegotiation %>"
+<% end -%>
+<% if buffersize -%>
+      buffersize="<%= buffersize %>"
+<% end -%>
+<% if backlog -%>
+      backlog="<%= backlog %>"
+<% end -%>
+<% if ciphers -%>
+      ciphers="<%= ciphers %>"
+<% end -%>
+<% if clientauth -%>
+      clientAuth="<%= clientauth %>"
+<% end -%>
+<% if clientcertprovider -%>
+      clientCertProvider="<%= clientcertprovider %>"
+<% end -%>
+<% if command_line_options -%>
+      command-line-options="<%= command_line_options %>"
+<% end -%>
+<% if compressablemimetype -%>
+      compressableMimeType="<%= compressablemimetype %>"
+<% end -%>
+<% if compression -%>
+      compression="<%= compression %>"
+<% end -%>
+<% if connectionlinger -%>
+      connectionLinger="<%= connectionlinger %>"
+<% end -%>
+<% if connectiontimeout -%>
+      connectionTimeout="<%= connectiontimeout %>"
+<% end -%>
+<% if crlfile -%>
+      crlfile="<%= crlfile %>"
+<% end -%>
+<% if disableuploadtimeout -%>
+      disableUploadTimeout="<%= disableuploadtimeout %>"
+<% end -%>
+<% if emptysessionpath -%>
+      emptySessionPath="<%= emptysessionpath %>"
+<% end -%>
+<% if enablelookups -%>
+      enableLookups="<%= enablelookups %>"
+<% end -%>
+<% if executor -%>
+      executor="<%= executor %>"
+<% end -%>
+<% if keepalivetimeout -%>
+      keepAliveTimeout="<%= keepalivetimeout %>"
+<% end -%>
+<% if keyalias -%>
+      keyAlias="<%= keyalias %>"
+<% end -%>
+<% if keystorefile -%>
+      keyStoreFile="<%= keystorefile %>"
+<% end -%>
+<% if keystorepass -%>
+      keyStorePass="<%= keystorepass %>"
+<% end -%>
+<% if keystoreprovider -%>
+      keyStoreProvider="<%= keystoreprovider %>"
+<% end -%>
+<% if keystoretype -%>
+      keyStoreType="<%= keystoretype %>"
+<% end -%>
+<% if maxheadercount -%>
+      maxHeaderCount="<%= maxheadercount %>"
+<% end -%>
+<% if maxhttpheadersize -%>
+      maxHttpHeaderSize="<%= maxhttpheadersize %>"
+<% end -%>
+<% if maxkeepaliverequests -%>
+      maxKeepaliveRequests="<%= maxkeepaliverequests %>"
+<% end -%>
+<% if maxparametercount -%>
+      maxParameterCount="<%= maxparametercount %>"
+<% end -%>
+<% if maxpostsize -%>
+      maxPostSize="<%= maxpostsize %>"
+<% end -%>
+<% if maxsavepostsize -%>
+      maxSavePostSize="<%= maxsavepostsize %>"
+<% end -%>
+<% if maxthreads -%>
+      maxThreads="<%= maxthreads %>"
+<% end -%>
+<% if nocompressionuseragents -%>
+      noCompressionUserAgents="<%= nocompressionuseragents %>"
+<% end -%>
+<% if oomparachute -%>
+      oomParachute="<%= oomparachute %>"
+<% end -%>
+<% if parsebodymethods -%>
+      parseBodyMethods="<%= parsebodymethods %>"
+<% end -%>
+<% if pollersize -%>
+      pollerSize="<%= pollersize %>"
+<% end -%>
+<% if pollerthreadcount -%>
+      pollerThreadCount="<%= pollerthreadcount %>"
+<% end -%>
+<% if pollerthreadpriority -%>
+      pollerThreadPriority="<%= pollerthreadpriority %>"
+<% end -%>
+<% if polltime -%>
+      pollTime="<%= polltime %>"
+<% end -%>
+<% if processorcache -%>
+      processorCache="<%= processorcache %>"
+<% end -%>
+<% if protocol %>      protocol="<%= protocol %>"
+<% end -%>
+<% if proxyname -%>
+      proxyName="<%= proxyname %>"
+<% end -%>
+<% if proxyport -%>
+      proxyPort="<%= proxyport %>"
+<% end -%>
+<% if redirectport -%>
+      redirectPort="<%= redirectport %>"
+<% end -%>
+<% if restricteduseragents -%>
+      restrictedUserAgents="<%= restricteduseragents %>"
+<% end -%>
+<% if scheme -%>
+      scheme="<%= scheme %>"
+<% end -%>
+<% if secure -%>
+      secure="<%= secure %>"
+<% end -%>
+<% if selectorpool_maxselectors -%>
+      selectorpool.maxSelectors="<%= selectorpool_maxselectors %>"
+<% end -%>
+<% if selectorpool_maxspareselectors -%>
+      selectorpool.maxSpareSelectors="<%= selectorpool_maxspareselectors %>"
+<% end -%>
+<% if selectortimeout -%>
+      selectorTimeout="<%= selectortimeout %>"
+<% end -%>
+<% if sendfilesize -%>
+      sendFileSize="<%= sendfilesize %>"
+<% end -%>
+<% if sendfilethreadcount -%>
+      sendFileThreadCount="<%= sendfilethreadcount %>"
+<% end -%>
+<% if server -%>
+      server="<%= server %>"
+<% end -%>
+<% if sessioncachesize -%>
+      sessionCacheSize="<%= sessioncachesize %>"
+<% end -%>
+<% if sessiontimeout -%>
+      sessionTimeout="<%= sessiontimeout %>"
+<% end -%>
+<% if socket_appreadbufsize -%>
+      socket.appReadBufSize="<%= socket_appreadbufsize %>"
+<% end -%>
+<% if socket_appwritebufsize -%>
+      socket.appWriteBufSize="<%= socket_appwritebufsize %>"
+<% end -%>
+<% if socket_bufferpoolsize -%>
+      socket.bufferPoolSize="<%= socket_bufferpoolsize %>"
+<% end -%>
+<% if socket_bufferpool -%>
+      socket.bufferPool="<%= socket_bufferpool %>"
+<% end -%>
+<% if socketbuffer -%>
+      socketBuffer="<%= socketbuffer %>"
+<% end -%>
+<% if socket_directbuffer -%>
+      socket.directBuffer="<%= socket_directbuffer %>"
+<% end -%>
+<% if socket_eventcache -%>
+      socket.eventCache="<%= socket_eventcache %>"
+<% end -%>
+<% if socket_keycache -%>
+      socket.keyCache="<%= socket_keycache %>"
+<% end -%>
+<% if socket_oobinline -%>
+      socket.ooBInline="<%= socket_oobinline %>"
+<% end -%>
+<% if socket_performancebandwidth -%>
+      socket.performanceBandwidth="<%= socket_performancebandwidth %>"
+<% end -%>
+<% if socket_performanceconnectiontime -%>
+      socket.performanCeconnectionTime="<%= socket_performanceconnectiontime %>"
+<% end -%>
+<% if socket_performancelatency -%>
+      socket.performanceLatency="<%= socket_performancelatency %>"
+<% end -%>
+<% if socket_processorcache -%>
+      socket.processorCache="<%= socket_processorcache %>"
+<% end -%>
+<% if socket_rxbufsize -%>
+      socket.rxBufSize="<%= socket_rxbufsize %>"
+<% end -%>
+<% if socket_sokeepalive -%>
+      socket.soKeepAlive="<%= socket_sokeepalive %>"
+<% end -%>
+<% if socket_solingeron -%>
+      socket.soLingerOn="<%= socket_solingeron %>"
+<% end -%>
+<% if socket_solingertime -%>
+      socket.soLingerTime="<%= socket_solingertime %>"
+<% end -%>
+<% if socket_soreuseaddress -%>
+      socket.soReuseAddress="<%= socket_soreuseaddress %>"
+<% end -%>
+<% if socket_sotimeout -%>
+      socket.soTimeout="<%= socket_sotimeout %>"
+<% end -%>
+<% if socket_sotrafficclass -%>
+      socket.soTrafficClass="<%= socket_sotrafficclass %>"
+<% end -%>
+<% if socket_tcpnodelay -%>
+      socket.tcpNoDelay="<%= socket_tcpnodelay %>"
+<% end -%>
+<% if socket_txbufsize -%>
+      socket.txBufSize="<%= socket_txbufsize %>"
+<% end -%>
+<% if socket_unlocktimeout -%>
+      socket.unlockTimeout="<%= socket_unlocktimeout %>"
+<% end -%>
+<% if sslcacertificatefile -%>
+      SSLCACertificateFile="<%= sslcacertificatefile %>"
+<% end -%>
+<% if sslcacertificatepath -%>
+      SSLCACertificatePath="<%= sslcacertificatepath %>"
+<% end -%>
+<% if sslcarevocationfile -%>
+      SSLCARevocationFile="<%= sslcarevocationfile %>"
+<% end -%>
+<% if sslcarevocationpath -%>
+      SSLCARevocationPath="<%= sslcarevocationpath %>"
+<% end -%>
+<% if sslcertificatechainfile -%>
+      SSLCertificateChainFile="<%= sslcertificatechainfile %>"
+<% end -%>
+<% if sslcertificatefile -%>
+      SSLCertificateFile="<%= sslcertificatefile %>"
+<% end -%>
+<% if sslcertificatekeyfile -%>
+      SSLCertificateKeyFile="<%= sslcertificatekeyfile %>"
+<% end -%>
+<% if sslciphersuite -%>
+      SSLCipherSuite="<%= sslciphersuite %>"
+<% end -%>
+<% if sslenabled -%>
+      SSLEnabled="<%= sslenabled %>"
+<% end -%>
+<% if sslpassword -%>
+      SSLPassword="<%= sslpassword %>"
+<% end -%>
+<% if sslprotocol -%>
+      SSLProtocol="<%= sslprotocol %>"
+<% end -%>
+<% if sslverifyclient -%>
+      SSLVerifyClient="<%= sslverifyclient %>"
+<% end -%>
+<% if sslverifydepth -%>
+      SSLVerifyDepth="<%= sslverifydepth %>"
+<% end -%>
+<% if tcpnodelay -%>
+      tcpNoDelay="<%= tcpnodelay %>"
+<% end -%>
+<% if threadpriority -%>
+      threadPriority="<%= threadpriority %>"
+<% end -%>
+<% if trustmanagerclassname -%>
+      trustManagerClassName="<%= trustmanagerclassname %>"
+<% end -%>
+<% if truststorefile -%>
+      trustStoreFile="<%= truststorefile %>"
+<% end -%>
+<% if truststorepass -%>
+      trustStorePass="<%= truststorepass %>"
+<% end -%>
+<% if truststoreprovider -%>
+      trustStoreProvider="<%= truststoreprovider %>"
+<% end -%>
+<% if truststoretype -%>
+      trustStoreType="<%= truststoretype %>"
+<% end -%>
+<% if uriencoding -%>
+      uriEncoding="<%= uriencoding %>"
+<% end -%>
+<% if usebodyencodingforuri -%>
+      useBodyEncodingForURI="<%= usebodyencodingforuri %>"
+<% end -%>
+<% if usecomet -%>
+      useComet="<%= usecomet %>"
+<% end -%>
+<% if useexecutor -%>
+      useExecutor="<%= useexecutor %>"
+<% end -%>
+<% if useipvhosts -%>
+      useIPVhosts="<%= useipvhosts %>"
+<% end -%>
+<% if usesendfile -%>
+      useSendFile="<%= usesendfile %>"
+<% end -%>
+<% if xpoweredby -%>
+      xPoweredBy="<%= xpoweredby %>"
+<% end -%>
     />
+

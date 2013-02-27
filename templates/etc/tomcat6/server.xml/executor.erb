@@ -1,10 +1,27 @@
-    <Executor
-      <% if classname -%>className="<%= classname %>"<% end -%>
-      <% if daemon -%>daemon="<%= daemon %>"<% end -%>      
-      <% if maxidletime -%>maxIdleTime="<%= maxidletime %>"<% end -%>
-      <% if maxthreads -%>maxThreads="<%= maxthreads %>"<% end -%>
-      <% if maxqueuesize -%>maxQueueSize="<%= maxqueuesize %>"<% end -%>
-      <% if minsparethreads -%>minSpareThreads="<%= minsparethreads %>"<% end -%>
-      <% if nameprefix -%>namePrefix="<%= nameprefix %>"<% end -%>
-      <% if threadpriority -%>threadPriority="<%= classname %>"<% end -%>
+    <Executor name="<%= name %>"
+<% if classname -%>
+        className="<%= classname %>"
+<% end -%>
+<% if daemon -%>
+        daemon="<%= daemon %>"
+<% end -%>
+<% if maxidletime -%>
+        maxIdleTime="<%= maxidletime %>"
+<% end -%>
+<% if maxthreads -%>
+        maxThreads="<%= maxthreads %>"
+<% end -%>
+<% if maxqueuesize -%>
+        maxQueueSize="<%= maxqueuesize %>"
+<% end -%>
+<% if minsparethreads -%>
+        minSpareThreads="<%= minsparethreads %>"
+<% end -%>
+<% if nameprefix -%>
+        namePrefix="<%= nameprefix %>"
+<% end -%>
+<% if threadpriority -%>
+        threadPriority="<%= classname %>"
+<% end -%>
     />
+
