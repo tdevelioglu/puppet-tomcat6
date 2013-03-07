@@ -97,119 +97,31 @@
 #
 # === Examples
 #
-#   class tomcat6(
-#     $authbind        = 'no',
-#     $cms_oc_fraction = false,
-#     $extra_jopts     = false,
-#     $fdlimit         = false,
-#     $jmx_port        = false,
-#     $jmx_passfile    = '/etc/tomcat6/jmxremote.password',
-#     $jsp_compiler    = false,
-#     $jvmroute        = $::hostname,
-#     $logfile_days    = '14',
-#     $max_heapsize    = 128m,
-#     $min_heapsize    = false,
-#     $max_newsize     = false,
-#     $min_newsize     = false,
-#     $max_permsize    = false,
-#     $min_permsize    = false,
-#     $restart         = false,
-#     $security        = false,
-#     $server_port     = '8005',
-#     $shutdown        = 'SHUTDOWN',
-#     ) {
+# class { 'tomcat6':; }
 #
-#     class { 'tomcat6::user':; }
+# tomcat6::executor { 'tomcatThreadPool':
+#   maxthreads      => '256',
+#   minsparethreads => '16';
+# }
 #
-#     case $restart {
-#       true: { $notify = Service['tomcat6'] }
-#       default: { $notify = undef }
-#     }
+# tomcat6::connector { '80':
+#   backlog              => '1024',
+#   compression          => '2048',
+#   connectiontimeout    => '20000',
+#   executor             => 'tomcatThreadPool',
+#   keepalivetimeout     => '1200000',
+#   maxkeepaliverequests => '-1',
+#   maxpostsize          => '10485760',
+#   pollersize           => '65536',
+#   protocol             => 'org.apache.coyote.http11.Http11AprProtocol',
+#   uriencoding          => 'utf-8';
+# }
 #
-#     package {
-#       'libtcnative-1':
-#         ensure => present;
-#       'tomcat6':
-#         ensure  => present,
-#         require => Class['tomcat6::user'];
-#     }
-#
-#     service { 'tomcat6':
-#       require => Package['tomcat6', 'libtcnative-1'];
-#     }
-#
-#     file {
-#       '/etc/tomcat6':
-#         ensure => directory,
-#         owner  => root,
-#         group  => root,
-#         mode   => '0644';
-#       '/etc/default/tomcat6':
-#         ensure  => file,
-#         owner   => root,
-#         group   => root,
-#         mode    => '0644',
-#         content => template('tomcat6/etc/default/tomcat6.erb'),
-#         before  => Package['tomcat6'];
-#     }
-#
-#     Concat {
-#       require => Class['tomcat6::user'],
-#       before  => Package['tomcat6']
-#     }
-#     concat {
-#       '/etc/tomcat6/server.xml':
-#         owner   => root,
-#         group   => tomcat6,
-#         mode    => '0644',
-#         require => File['/etc/tomcat6'];
-#       '/etc/tomcat6/tomcat-users.xml':
-#         owner   => root,
-#         group   => tomcat6,
-#         mode    => '0640',
-#         require => File['/etc/tomcat6'];
-#     }
-#
-#     Concat::Fragment {
-#       before => Package['tomcat6']
-#     }
-#     concat::fragment {
-#       'server.xml_server':
-#         target  => '/etc/tomcat6/server.xml',
-#         content => template('tomcat6/etc/tomcat6/server.xml/server.erb'),
-#         order   => 000,
-#         notify  => $notify;
-#       'server.xml_service':
-#         target  => '/etc/tomcat6/server.xml',
-#         content => template('tomcat6/etc/tomcat6/server.xml/service.erb'),
-#         order   => 100,
-#         notify  => $notify;
-#       'server.xml_engine':
-#         target  => '/etc/tomcat6/server.xml',
-#         content => template('tomcat6/etc/tomcat6/server.xml/engine.erb'),
-#         order   => 200,
-#         notify  => $notify;
-#       'server.xml_footer':
-#         target  => '/etc/tomcat6/server.xml',
-#         content => template('tomcat6/etc/tomcat6/server.xml/footer.erb'),
-#         order   => 999,
-#         notify  => $notify;
-#     }
-#     concat::fragment {
-#       'tomcat-users.xml_header':
-#         target  => '/etc/tomcat6/tomcat-users.xml',
-#         content => template('tomcat6/etc/tomcat6/tomcat-users.xml/header.erb'),
-#         order   => 000,
-#         notify  => $notify;
-#       'tomcat-users.xml_footer':
-#         target  => '/etc/tomcat6/tomcat-users.xml',
-#         content => template('tomcat6/etc/tomcat6/tomcat-users.xml/footer.erb'),
-#         order   => 999,
-#         notify  => $notify;
-#     }
-#
-#   }
-#
+# tomcat6::users_role { 'Jolokia': }
+# tomcat6::users_user { 'jolokia':
+#     password => hiera('jolokia_tomcat6_password'),
+#     roles    => 'Jolokia';
+# }
 # === Resources
 #
 # * http://tomcat.apache.org/tomcat-6.0-doc/
