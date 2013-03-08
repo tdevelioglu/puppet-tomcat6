@@ -43,7 +43,7 @@
 # * Taylan Develioglu <taylan.develioglu@gmail.com>
 #
 class tomcat6::user (
-  $uid = 120,
+  $uid,
   $gid = $uid
   ) {
 
