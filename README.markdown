@@ -7,6 +7,7 @@ Requires R.I. Pienaar's concat module.
 
 Usage:
 ------
+<pre>
  class { 'tomcat6':; }
 
  tomcat6::executor { 'tomcatThreadPool':
